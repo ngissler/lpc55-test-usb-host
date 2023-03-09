@@ -1,0 +1,25 @@
+manifest:
+  remotes:
+    - name: das
+      url-base: https://git.lacie.com/das
+    - name: daspro
+      url-base: https://git.lacie.com/daspro
+    - name: dev
+      url-base: https://git.lacie.com/dev      
+
+  self:
+    path: lpc55-test-usb-host
+
+  projects:
+    - name: zephyr
+      url: https://git.lacie.com/dev/zephyr.git
+      revision: 07c6af3b8c35c1e49186578ca61a25c76e2fb308
+      path: zephyr
+      west-commands: scripts/west-commands.yml
+      import:
+        name-allowlist:
+          - cmsis
+          - hal_nxp
+
+
+
